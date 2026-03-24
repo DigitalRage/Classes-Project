@@ -1,0 +1,70 @@
+CLASS Pet:
+    ATTRIBUTES:
+        name
+        species
+        age
+        level
+        health
+        hunger
+        happiness
+        energy
+        skills (list)
+        alive (boolean)
+
+    METHOD __init__(name, species):
+        set name
+        set species
+        set age = 0
+        set level = 1
+        set health = 100
+        set hunger = 50
+        set happiness = 50
+        set energy = 50
+        set skills = empty list
+        set alive = True
+
+    METHOD feed(food_item):
+        increase hunger by food_item.hunger_value
+        increase happiness by food_item.happiness_value
+        decrease energy slightly
+        CALL clamp_stats()
+        RETURN message describing changes
+
+    METHOD play():
+        decrease energy
+        increase happiness
+        decrease hunger
+        CALL clamp_stats()
+        RETURN message describing changes
+
+    METHOD sleep():
+        increase energy
+        decrease hunger
+        CALL clamp_stats()
+        RETURN message describing changes
+
+    METHOD update_health():
+        IF hunger < 20 OR energy < 20 OR happiness < 20:
+            decrease health
+        ELSE:
+            increase health slowly
+        CALL clamp_stats()
+
+    METHOD level_up():
+        IF happiness > 80 AND health > 80:
+            increase level
+            unlock new skill
+            RETURN message
+
+    METHOD random_event():
+        choose random event:
+            sickness → decrease health
+            finds toy → increase happiness
+            nothing happens
+        RETURN event message
+
+    METHOD get_status():
+        RETURN formatted string of all stats
+
+    METHOD clamp_stats():
+        ensure all stats stay between 0 and 100

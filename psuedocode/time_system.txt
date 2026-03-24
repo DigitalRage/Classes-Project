@@ -1,0 +1,9 @@
+CLASS Food:
+    ATTRIBUTES:
+        name
+        hunger_value
+        happiness_value
+        cost
+
+    METHOD __init__(name, hunger_value, happiness_value, cost):
+        set attributes

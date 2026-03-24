@@ -1,0 +1,9 @@
+FUNCTION save_game():
+    open file "save.json"
+    convert pets list to dictionaries
+    write JSON
+
+FUNCTION load_game():
+    open file "save.json"
+    read JSON
+    recreate Pet objects

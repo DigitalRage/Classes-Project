@@ -1,0 +1,18 @@
+FUNCTION pet_management_menu():
+    DISPLAY:
+        [1] View Pets
+        [2] Create New Pet
+        [3] Switch Active Pet
+        [4] Release Pet
+        [B] Back
+
+    choice = get_valid_input()
+
+    IF choice == 1:
+        display all pets
+    IF choice == 2:
+        CALL create_pet()
+    IF choice == 3:
+        CALL switch_pet()
+    IF choice == 4:
+        CALL release_pet()

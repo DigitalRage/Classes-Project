@@ -1,0 +1,28 @@
+CLASS GameManager:
+    ATTRIBUTES:
+        pets (list)
+        active_pet (Pet)
+        time (GameTime)
+
+    METHOD create_pet():
+        ask user for name and species
+        create new Pet object
+        add to pets list
+        set active_pet to new pet
+
+    METHOD switch_pet():
+        display list of pets
+        user selects one
+        set active_pet
+
+    METHOD release_pet():
+        remove selected pet from list
+
+    METHOD save_game():
+        convert all pet data to dictionary
+        write to JSON file
+
+    METHOD load_game():
+        read JSON file
+        recreate Pet objects
+        restore active_pet

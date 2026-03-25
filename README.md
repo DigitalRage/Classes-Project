@@ -14,9 +14,9 @@ Players can create multiple pets, care for them, manage their stats, and watch t
 1. Download or clone the repository.
 2. Open the project in GitHub Codespaces, VS Code, or any Python environment.
 3. Run the main program:
-   ```
-   python main.py
-   ```
+   main.py
+   After opening the src folder. 
+
 4. Follow the on‑screen menu to:
    - Create pets  
    - Feed, play, and care for them  
